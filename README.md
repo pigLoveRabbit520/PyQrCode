@@ -1,9 +1,19 @@
 # 说明
-本项目基于**Python**。拟合走势，利用[**scipy**](https://www.scipy.org/)库的`curve_fit`函数
+本项目利用[**opencv-python**](https://pypi.org/project/opencv-python/)库和`pyzbar`库。  
+使用zbar进行二维码解析，但是标准的zbar不支持`python3`，这个比较坑，还好有个大神在zbar的基础上包装了一下，做了pyzbar的开发包，支持`python2`与`python3`，非常的好用。安装非常容易，windows下一条命令搞定，Linux与Mac OS下面要先安装zbar然后再执行此命令即可。  
+在Ubuntu或树莓派上安装Zbar
+```shell script
+$ sudo apt-get install libzbar0
+```
+在MacOS系统中安装Zbar
+```shell script
+$ brew install zbar
+```
+
 
 # 使用
 ```
-docker run -it --rm -p 8888:8000 salamandermh/trend_predict
+docker run -it --rm -p 8888:8000 salamandermh/pyqrcode
 ```
 
 # API
@@ -43,3 +53,8 @@ docker run -it --rm -p 8888:8000 salamandermh/trend_predict
 
 # 环境变量
 * `WEB_CONCURRENCY`：设置worker进程数量
+
+
+
+# 参考文章
+* [用OpenCV和Python识别二维码和条形码](https://zhuanlan.zhihu.com/p/40025902)

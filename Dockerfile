@@ -1,4 +1,4 @@
-FROM python:3.7.7-slim
+FROM jjanzic/docker-python3-opencv:opencv-4.0.1
 
 MAINTAINER salamander
 
@@ -7,7 +7,7 @@ WORKDIR /usr/src/app
 COPY ./src .
 
 RUN apt-get update
-RUN apt-get install -y procps libglib2.0-0
+RUN apt-get install -y procps
 RUN apt-get install -y libzbar0  # 安装Zbar
 RUN pip install -i  https://pypi.doubanio.com/simple/ --no-cache-dir -r requirements.txt
 

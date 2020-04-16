@@ -4,7 +4,7 @@ MAINTAINER salamander
 
 WORKDIR /usr/src/app
 
-COPY ./src .
+COPY ./main .
 
 RUN apt-get update
 RUN apt-get install -y procps

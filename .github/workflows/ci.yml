@@ -21,7 +21,7 @@ jobs:
         python -m pip install --upgrade pip
         pip install --no-cache-dir -r main/requirements.txt
         pip install opencv-python
-        apt-get install -y libzbar0
+        sudo apt-get install -y libzbar0
     - name: Test Decode Qr Image
       run: |
         cd test && python -m unittest test

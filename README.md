@@ -9,6 +9,7 @@ $ sudo apt-get install libzbar0
 ```shell script
 $ brew install zbar
 ```
+Python web框架使用[FastAPI](https://fastapi.tiangolo.com/)
 
 
 # 使用

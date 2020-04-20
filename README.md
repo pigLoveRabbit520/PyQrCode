@@ -1,4 +1,4 @@
-# Python二维码识别
+# Python二维码识别Web服务
 ![Test Decode Image](https://github.com/salamander-mh/PyQrCode/workflows/Test%20Decode%20Image/badge.svg?event=push)
 [![GitHub](https://img.shields.io/github/license/salamander-mh/calculator)](LICENSE) 
 

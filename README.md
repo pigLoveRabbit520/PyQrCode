@@ -1,4 +1,8 @@
-# 说明
+# Python二维码识别
+![Test Decode Image](https://github.com/salamander-mh/PyQrCode/workflows/Test%20Decode%20Image/badge.svg?event=push)
+[![GitHub](https://img.shields.io/github/license/salamander-mh/calculator)](LICENSE) 
+
+
 本项目利用[**opencv-python**](https://pypi.org/project/opencv-python/)库和`pyzbar`库。  
 使用zbar进行二维码解析，但是标准的zbar不支持`python3`，这个比较坑，还好有个大神在zbar的基础上包装了一下，做了pyzbar的开发包，支持`python2`与`python3`，非常的好用。安装非常容易，windows下一条命令搞定，Linux与Mac OS下面要先安装zbar然后再执行此命令即可。  
 在Ubuntu或树莓派上安装Zbar

@@ -28,7 +28,7 @@ jobs:
       run: |
         cd test && python -m unittest test
 
-  build image and push:
+  build_image_and_push:
 
     runs-on: ubuntu-latest
 

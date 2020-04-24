@@ -6,9 +6,14 @@ import numpy as np
 from fastapi import FastAPI, File, UploadFile
 from fastapi.exceptions import RequestValidationError
 from fastapi.responses import JSONResponse, HTMLResponse
+from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
 
 app = FastAPI()
+
+# 静态目录
+app.mount("/static", StaticFiles(directory="static"), name="static")
+
 
 @app.exception_handler(RequestValidationError)
 async def validation_exception_handler(request, exc: RequestValidationError):

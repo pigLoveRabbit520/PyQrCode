@@ -1,13 +1,12 @@
 from pyzbar import pyzbar
 import cv2
-from typing import Callable, List
-import time, os
+from typing import Callable
+import time
 import numpy as np
 from fastapi import FastAPI, File, UploadFile
 from fastapi.exceptions import RequestValidationError
-from fastapi.responses import JSONResponse
+from fastapi.responses import JSONResponse, HTMLResponse
 from pydantic import BaseModel
-import uvicorn
 
 app = FastAPI()
 
@@ -20,7 +19,11 @@ async def validation_exception_handler(request, exc: RequestValidationError):
 
 @app.get("/")
 def read_root():
-    return {"Hello": "QrCode"}
+    htmlContent = ""
+    with open('index.html', 'r') as file:
+        htmlContent = file.read()
+    return HTMLResponse(content=htmlContent, status_code=200)
+
 
 @app.post("/decode")
 def decodeImage(file: UploadFile = File(...)):

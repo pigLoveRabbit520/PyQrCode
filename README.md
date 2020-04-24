@@ -1,6 +1,6 @@
 # Python二维码识别Web服务
 ![Test Decode Image](https://github.com/salamander-mh/PyQrCode/workflows/Test%20Decode%20Image/badge.svg?event=push)
-[![GitHub](https://img.shields.io/github/license/salamander-mh/calculator)](LICENSE) 
+[![GitHub](https://img.shields.io/github/license/salamander-mh/PyQrCode)](LICENSE) 
 
 
 本项目利用[**opencv-python**](https://pypi.org/project/opencv-python/)库和`pyzbar`库。  

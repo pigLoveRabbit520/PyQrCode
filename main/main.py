@@ -51,7 +51,7 @@ def decodeImage(file: UploadFile = File(...)):
 def detectImage(imageFile):
     imageFile.seek(0)
     img_array = np.asarray(bytearray(imageFile.file.read()), dtype=np.uint8)
-    img = cv2.imdecode(img_array, 0)
+    img = cv2.imdecode(img_array, cv2.IMREAD_GRAYSCALE)
     barcodes = pyzbar.decode(img)
     return barcodes
 

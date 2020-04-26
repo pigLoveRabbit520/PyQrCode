@@ -63,3 +63,12 @@ docker run -it --rm -p 8888:8000 salamandermh/pyqrcode
 
 # 参考文章
 * [用OpenCV和Python识别二维码和条形码](https://zhuanlan.zhihu.com/p/40025902)
+
+
+# cv2模块
+`cv2.imread`的`flag`参数说明：
+* `cv2.IMREAD_GRAYSCALE` 图片转化为单通道灰度图  
+* `cv2.IMREAD_COLOR` 图片转化为三通道`BGR`图片
+* `cv2.IMREAD_UNCHANGED` 加载一副彩色图像，同时还会有透明度通道，如png图像
+* `cv2.IMREAD_ANYCOLOR` 任何形式的图片格式都直接读入
+* `cv2.IMREAD_ANYDEPTH` 若输入图片是16或32位深度图直接读入，否则转化位8位深度图

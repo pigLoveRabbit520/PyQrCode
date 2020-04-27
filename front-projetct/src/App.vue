@@ -45,7 +45,7 @@
                     <tbody>
                     <tr v-for="(item, index) in reverseResult">
                         <td class="align-middle">{{ reverseResult.length - index }}</td>
-                        <td><img :src="item.img" alt="图片" width="280px"></td>
+                        <td><img :src="item.img" alt="图片" width="230px"></td>
                         <td class="align-middle">
                             <span v-for="text in item.data" style="font-weight: bold; display: inline-block; margin-top: 8px;">
                                 {{ text }} <br/>

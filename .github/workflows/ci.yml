@@ -28,12 +28,14 @@ jobs:
       run: |
         cd test && python -m unittest test
 
-  build-front-page:
+
+  build_image_and_push:
+
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v2
-      - name: Use Node.js
+      - name: Setup Node.js
         uses: actions/setup-node@v1
         with:
           node-version: '12.x'
@@ -44,13 +46,6 @@ jobs:
           npm run build --if-present
           cp index.html ../main/index.html
           cp -R static ../main/static
-
-  build_image_and_push:
-
-    runs-on: ubuntu-latest
-
-    steps:
-      - uses: actions/checkout@v2
       - name: Build the Docker image and push to Docker Hub
         uses: mr-smithers-excellent/docker-build-push@v3
         with:

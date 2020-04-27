@@ -1,5 +1,6 @@
-var path = require('path')
-var webpack = require('webpack')
+const path = require('path')
+const webpack = require('webpack')
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 
 const backPort = 8888
 
@@ -60,7 +61,10 @@ module.exports = {
     performance: {
         hints: false
     },
-    devtool: '#eval-source-map'
+    devtool: '#eval-source-map',
+    optimization: {
+        minimizer: [new UglifyJsPlugin()],
+    },
 }
 
 if (process.env.NODE_ENV === 'production') {
@@ -70,12 +74,6 @@ if (process.env.NODE_ENV === 'production') {
         new webpack.DefinePlugin({
             'process.env': {
                 NODE_ENV: '"production"'
-            }
-        }),
-        new webpack.optimize.UglifyJsPlugin({
-            sourceMap: true,
-            compress: {
-                warnings: false
             }
         }),
         new webpack.LoaderOptionsPlugin({

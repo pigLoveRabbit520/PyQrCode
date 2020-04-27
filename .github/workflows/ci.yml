@@ -45,7 +45,7 @@ jobs:
           npm install
           npm run build --if-present
           cp index.html ../main/index.html
-          cp -R static ../main/static
+          cp -R static ../main/
       - name: Build the Docker image and push to Docker Hub
         uses: mr-smithers-excellent/docker-build-push@v3
         with:

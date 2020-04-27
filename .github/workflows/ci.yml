@@ -28,6 +28,27 @@ jobs:
       run: |
         cd test && python -m unittest test
 
+  build-front-page:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [10.x, 12.x]
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Build Front Project
+          run: |
+            cd front-projetct
+            npm install
+            npm run build --if-present
+            cp index.html ../main/index.html
+            cp -R static ../main/static
+
   build_image_and_push:
 
     runs-on: ubuntu-latest

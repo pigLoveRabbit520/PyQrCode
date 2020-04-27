@@ -12,6 +12,7 @@ Python web框架使用[FastAPI](https://fastapi.tiangolo.com/)
 ```
 docker run -it --rm -p 8888:8000 salamandermh/pyqrcode
 ```
+访问`http://localhost:8888`，可以看到用于测试的页面。
 
 # API
 

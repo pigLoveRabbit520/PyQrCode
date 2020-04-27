@@ -4,15 +4,7 @@
 
 
 本项目利用[**opencv-python**](https://pypi.org/project/opencv-python/)库和`pyzbar`库。  
-使用zbar进行二维码解析，但是标准的zbar不支持`python3`，这个比较坑，还好有个大神在zbar的基础上包装了一下，做了pyzbar的开发包，支持`python2`与`python3`，非常的好用。安装非常容易，windows下一条命令搞定，Linux与Mac OS下面要先安装zbar然后再执行此命令即可。  
-在Ubuntu或树莓派上安装Zbar
-```shell script
-$ sudo apt-get install libzbar0
-```
-在MacOS系统中安装Zbar
-```shell script
-$ brew install zbar
-```
+
 Python web框架使用[FastAPI](https://fastapi.tiangolo.com/)
 
 
@@ -61,8 +53,18 @@ docker run -it --rm -p 8888:8000 salamandermh/pyqrcode
 
 
 
-# 参考文章
-* [用OpenCV和Python识别二维码和条形码](https://zhuanlan.zhihu.com/p/40025902)
+# 参考文章和说明
+* [用OpenCV和Python识别二维码和条形码](https://zhuanlan.zhihu.com/p/40025902)  
+
+使用zbar进行二维码解析，但是标准的zbar不支持`python3`，这个比较坑，还好有个大神在zbar的基础上包装了一下，做了pyzbar的开发包，支持`python2`与`python3`，非常的好用。安装非常容易，windows下一条命令搞定，Linux与Mac OS下面要先安装zbar然后再执行此命令即可。  
+在Ubuntu或树莓派上安装Zbar
+```shell script
+$ sudo apt-get install libzbar0
+```
+在MacOS系统中安装Zbar
+```shell script
+$ brew install zbar
+```
 
 
 # cv2模块
